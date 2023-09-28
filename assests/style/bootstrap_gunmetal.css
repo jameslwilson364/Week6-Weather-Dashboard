@@ -245,7 +245,7 @@ h2, .h2 {
 @media (min-width: 1200px) {
   h2, .h2 {
     font-size: 2rem;
-    text-align: center;
+    text-align: left;
   }
 }
 
@@ -719,6 +719,9 @@ progress {
 .img-fluid {
   max-width: 100%;
   height: auto;
+}
+#currentWeather {
+  border-style: solid;
 }
 
 .img-thumbnail {
