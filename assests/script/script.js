@@ -31,7 +31,7 @@
             console.log(userCityValue);
             userCityValue = userInput.value;
             console.log(userCityValue);
-                fetch('https://api.openweathermap.org/data/2.5/weather?q='+userCityValue+',us&APPID=e59d5aba827db96109ea6ce009719b60&units=imperial')
+                fetch('https://api.openweathermap.org/data/2.5/weather?q='+userCityValue+',us&APPID=*&units=imperial')
                 .then(function (response) {
                     return response.json();
                 })
