@@ -13,7 +13,16 @@
     function submitQuery() {
         var submitButton = document.getElementById("submitButton");
         var userInput = document.getElementById("selectedCity");
+        var forecastCurrentTemp = document.getElementById("currentTemp");
+        var forecastCurrentWind = document.getElementById("currentWind");
+        var forecastCurrentHum = document.getElementById("currentHum");
+        var forecastCurrentCity = document.getElementById("currentCityValue");
         var userCityValue = ("");
+        var currentCityTemp = ("");
+        var currentCityHumidity = ("");
+        var currentCityWind = ("");
+        var currentCityName = ("");
+        
     
         submitButton.addEventListener("click", function(event) {
             event.preventDefault();
@@ -29,6 +38,21 @@
                 .then(function (data) {
                     console.log('Name:');
                     console.log(data);
+                    // console.log(data.main.temp);
+                    console.log(data.name);
+                    currentCityName = data.name;
+                    forecastCurrentCity.textContent = ("The current forecast for " + currentCityName);
+                    currentCityTemp = data.main.temp;
+                    console.log(currentCityTemp + " F");
+                    forecastCurrentTemp.textContent = ("Current Temperature is "+ currentCityTemp + " F"); 
+                    // console.log(data.wind.speed);
+                    currentCityWind = data.wind.speed;
+                    console.log(currentCityWind + " mph");
+                    forecastCurrentWind.textContent = ("Current Wind Speed is "+ currentCityWind + " mph");
+                    // console.log(data.main.humidity);
+                    currentCityHumidity = data.main.humidity;
+                    console.log(currentCityHumidity + " %");
+                    forecastCurrentHum.textContent = ("Current Humidity is "+ currentCityHumidity + " %");
                 });
         });
     }
