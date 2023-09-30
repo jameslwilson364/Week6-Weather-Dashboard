@@ -8,7 +8,33 @@
 // WHEN I click on a city in the search history
 // THEN I am again presented with current and future conditions for that city
 
-// add form input to #selectedCity
+
+// city search
+    function submitQuery() {
+        var submitButton = document.getElementById("submitButton");
+        var userInput = document.getElementById("selectedCity");
+        var userCityValue = ("");
+    
+        submitButton.addEventListener("click", function(event) {
+            event.preventDefault();
+            console.log(submitButton);
+            console.log(userInput);
+            console.log(userCityValue);
+            userCityValue = userInput.value;
+            console.log(userCityValue);
+                fetch('https://api.openweathermap.org/data/2.5/weather?q='+userCityValue+',us&APPID=e59d5aba827db96109ea6ce009719b60&units=imperial')
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    console.log('Name:');
+                    console.log(data);
+                });
+        });
+    }
+submitQuery();
+
+ // add form input to #selectedCity
 // when i click the submit button a valid city must be present
 // when i click the submit button if a valid city is present it returns and places the city in the saved ul as a button
 // saved city can recall the data displayed in the forecast  and 5 day forecast as a saved search
