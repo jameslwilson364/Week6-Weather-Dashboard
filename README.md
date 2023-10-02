@@ -25,7 +25,7 @@ Page consists of the following
 - script.js
 - bootstrap dark theme
 
-https://jameslwilson364.github.io/Challenge-5-Daily_Calendar/
+https://jameslwilson364.github.io/Week6-Weather-Dashboard/
 
 ## Usage
 
@@ -33,8 +33,7 @@ Feel free to use any and all parts of this.
 
 ## Credits
 
-Thanks to the folks at both MDN, W3 and StackOverflow. The walkthroughs on nesting for loops and event listeners were particularly helpful.
-
+Thanks to the folks at both MDN, W3 and StackOverflow. The walkthroughs on localStorage and fetch requests were particularly helpful
 ## License
 
 Any body can use this as they see fit.
